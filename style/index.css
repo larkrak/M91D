@@ -1,0 +1,263 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background: linear-gradient(to right top, #65dfc9, #75e7f8);
+    font-family: 'Poppins', sans-serif;
+}
+
+nav i{
+    display: none !important;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav img{
+    max-height: 12vh;
+    padding: 10px 0 10px 50px;
+}
+
+nav ul{
+    list-style: none;
+    align-items: center;
+    font-size: 24px;
+    letter-spacing: 3px;
+}
+
+#burger{
+    border-radius: 100%;
+}
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+
+/* stroke */
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: black;
+  height: 2px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+nav ul li{
+    display: inline;
+    padding: 20px;
+}
+
+nav ul li:hover{
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.main-container{
+    padding: 50px 0 50px 0;
+}
+
+
+table { 
+    width: 60% !important;
+    min-height: 500px;
+    background: linear-gradient(to right bottom, rgba(255,255,255, 0.7), rgba(255,255,255,0.3));
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    overflow-y: hidden;
+}
+
+td.writter a::after,
+td.writter a::before{
+    transition: all .5s;
+}
+td.writter a{
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+td.writter a::after{
+    position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: black;
+  height: 2px;
+}
+td.writter a:hover::after{
+    width: 100%;
+}
+
+
+table tr td:first-child{
+    padding-left: 25px;
+}
+
+#th-cat{
+    transition: .5s ease all;
+}
+
+table td:not(:first-child){
+    text-align: center;
+}
+
+table th{
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+#th-cat.color{
+    background-color: white;
+}
+
+#tr-cat th:first-child{
+    width: 100%;
+}
+#tr-cat th:nth-child(2), #tr-cat:nth-child(3){
+    width: 1%;
+    white-space: nowrap;
+}
+
+.trending{
+    padding-top: 40px;
+    width: 60%;
+    margin:auto;
+}
+
+.trending button{
+    padding: 10px 15px 10px 15px;
+    outline: none;
+    border: none;
+    background-color: #2F82FB;
+    color: white;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.trending h3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.game-cards{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background: linear-gradient(to right bottom, rgba(255,255,255, 0.7), rgba(255,255,255,0.3));
+    border-radius: 10px;
+}
+
+.game-card{
+    min-height: max-content;
+    width: 200px;
+    margin-top: 20px;
+}
+
+.game-card span:nth-child(2){
+    letter-spacing: 20px;
+}
+
+
+.game-card img{
+    max-height: 250px;
+}
+
+@media (max-width: 800px) {
+    nav img{
+        max-width: 15vh;
+    }
+    nav ul {
+        font-size: 18px;
+        align-items: center;
+    }
+}
+
+@media (max-width: 600px) {
+    nav img{
+        min-width: 12vh;
+    }
+
+    table, .trending, .game-cards{
+        width: 90% !important;
+    }
+
+    #nav-ul.hide{
+        opacity: 0;
+        transition: 0.5s ease all;
+    }
+
+    #burger.color{
+        background-color: white;
+        transition: 0.5s ease all;
+    }
+
+    #burger.white{
+        background-color: white;
+        
+    }
+
+    #nav-ul{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        right: 25px;
+        background-color: white;
+        border-radius: 10px;
+        z-index: 1000;
+        opacity: 1;
+    }
+
+    nav ul li{
+        width: 100%;
+    }
+
+    nav i{
+        width: 70px;
+        height: 70px;
+        font-size: 50px;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        padding:10px 10px 10px 10px;
+        color: #616161;
+    }
+
+    table{
+        font-size: 14px;
+    }
+}
