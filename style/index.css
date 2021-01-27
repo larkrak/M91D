@@ -177,7 +177,7 @@ table th{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    background: linear-gradient(to right bottom, rgba(255,255,255, 0.7), rgba(255,255,255,0.3));
+    background: linear-gradient(to right, rgba(255,255,255, 0.9), rgba(255,255,255,0.9));
     border-radius: 10px;
 }
 
@@ -193,16 +193,81 @@ table th{
 
 
 .game-card img{
-    max-height: 250px;
+    max-height: 200px;
 }
 
-@media (max-width: 800px) {
+footer{
+    width: 60%;
+    margin: auto;
+}
+
+footer h2{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+footer h2 > span{
+    font-size: 14px;
+}
+
+footer div ul{
+    list-style: none;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+footer div{
+    background: linear-gradient(to right bottom, rgba(255,255,255, 0.7), rgba(255,255,255,0.3));
+    padding: 35px 15px 15px 15px;
+    border-radius: 10px;
+}
+
+footer ul li{
+    margin: 0 30px 0 0;
+}
+
+footer div ul li:nth-child(1){
+    flex: 1;
+}
+
+footer div ul li:not(:nth-child(1)){
+    flex: 1;
+}
+
+footer ul li:nth-child(2)::before{
+    content: "|";
+    padding-right: 10px;
+}
+
+footer div i{
+    font-size: 30px;
+    transition: 0.3s ease all;
+
+}
+
+footer div i:hover{
+    cursor: pointer;
+    color: #024242;
+}
+
+hr{
+    height: 4px;
+    background: linear-gradient(to right bottom, rgba(255,255,255, 0.7), rgba(255,255,255,0.3));
+}
+
+@media (max-width: 1500px) {
     nav img{
         max-width: 15vh;
     }
     nav ul {
         font-size: 18px;
         align-items: center;
+    }
+    
+    .main-container > *, footer{
+        width: 90% !important;
     }
 }
 
@@ -259,5 +324,27 @@ table th{
 
     table{
         font-size: 14px;
+    }
+
+    footer div ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer div ul{
+        background: linear-gradient(to right bottom, rgba(255,255,255, 0.7), rgba(255,255,255,0.3));
+        border-radius: 10px;
+    }
+
+    footer div ul li:nth-child(1){
+        font-size: 28px;
+    }
+
+    footer div ul li{
+        padding: 10px 0px 10px 0px;
+    }
+
+    footer ul li:nth-child(2)::before{
+        content: "";
     }
 }
